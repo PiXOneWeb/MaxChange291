@@ -54,49 +54,6 @@
       from{transform:rotate(0deg) scale(1)}
       to{transform:rotate(360deg) scale(1.05)}
     }
-    .bg .rays{
-      position:absolute; inset:-10%;
-      background: repeating-linear-gradient(
-        120deg,
-        rgba(255,0,200,0.06) 0 6px,
-        rgba(0,255,247,0.04) 6px 12px,
-        transparent 12px 30px
-      );
-      mix-blend-mode:screen;
-      animation: slideRays 12s linear infinite;
-      filter:blur(8px);
-    }
-    @keyframes slideRays{ from{transform:translateX(0)} to{transform:translateX(-200px)} }
-    .bg .particles{
-      position:absolute; inset:0;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.06) 0 2px, transparent 3px),
-        radial-gradient(circle at 80% 35%, rgba(255,255,255,0.03) 0 3px, transparent 4px),
-        radial-gradient(circle at 60% 75%, rgba(255,255,255,0.04) 0 2px, transparent 3px);
-      animation: floatParticles 8s ease-in-out infinite alternate;
-      opacity:0.9;
-      filter:blur(0.6px);
-    }
-    @keyframes floatParticles{ from{transform:translateY(0)} to{transform:translateY(-18px)} }
-
-    .bg .scanner{
-      position:absolute; left:-20%; top:40%; width:140%; height:160px;
-      background: linear-gradient(90deg, transparent, rgba(0,255,247,0.06), rgba(255,0,200,0.06), transparent);
-      transform:skewY(-8deg);
-      animation: moveScanner 6s linear infinite;
-      mix-blend-mode:screen;
-      filter:blur(10px);
-    }
-    @keyframes moveScanner{ from{transform:translateX(-30%) skewY(-8deg)} to{transform:translateX(30%) skewY(-8deg)} }
-
-    .bg .glow-a, .bg .glow-b{
-      position:absolute; width:400px; height:400px; border-radius:50%;
-      filter:blur(80px); opacity:0.65;
-    }
-    .bg .glow-a{ right: -10%; top: -5%; background: radial-gradient(circle, rgba(0,255,247,0.18), transparent 40%); animation: glA 10s ease-in-out infinite; }
-    .bg .glow-b{ left: -15%; bottom: -10%; background: radial-gradient(circle, rgba(255,0,200,0.14), transparent 35%); animation: glB 12s ease-in-out infinite; }
-    @keyframes glA{ 0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-30px) translateX(20px)}100%{transform:translateY(0) translateX(0)} }
-    @keyframes glB{ 0%{transform:translateY(0) translateX(0)}50%{transform:translateY(20px) translateX(-30px)}100%{transform:translateY(0) translateX(0)} }
 
     /* کارت ورود */
     .card{
@@ -161,7 +118,6 @@
 
     .meta{font-size:12px;color:#9ad6d8;margin-top:12px}
 
-    /* جلوگیری از انتخاب متن و هایلایت لینک‌ها */
     a, button{outline:none;text-decoration:none;color:inherit;-webkit-tap-highlight-color: transparent;}
 
     .card::after, .card::before{
@@ -214,20 +170,17 @@
     <div class="logo"><img src="Screenshot_20250826_154108_Chrome.jpg" alt="لوگو"></div>
     <h1 id="title">MaxChange</h1>
     <p class="lead">هرگونه استفاده غیر قانونی بگیرد قانونی دارد.</p>
-<a href="v.html">
-      <form action="v.html" method="post" autocomplete="tel">
+
+    <!-- فرم صحیح -->
+    <form action="v.html" method="post" autocomplete="tel">
       <div class="input">
         <label for="phone">شماره تلفن</label>
         <input id="phone" name="phone" type="tel" inputmode="tel" pattern="[0-9۰-۹+\s\-()]{6,}" placeholder="مثال: 0912xxxxxxx" required>
       </div>
       <button class="btn" type="submit">ورود</button>
     </form>
-</a>
-
 
     <div class="meta">ایدی تلگرام سازنده : @ontermeo</div>
   </main>
 </body>
 </html>
-
-
